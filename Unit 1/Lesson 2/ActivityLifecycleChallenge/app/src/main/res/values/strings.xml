@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ActivityLifecycleChallenge</string>
+    <string name="activity2_name">Second Activity</string>
+    <string name="shopping_list">Add an item to the shopping list</string>
+    <string name="product_1">Cheese</string>
+    <string name="product_2">Rice</string>
+    <string name="product_3">Apples</string>
+    <string name="product_4">Milk</string>
+    <string name="product_5">Bread</string>
+    <string name="button_add_item">Add Item</string>
+</resources>
