@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JobScheduler</string>
+    <string name="job_service_title">Job Service</string>
+    <string name="job_service_text">Your Job is running!</string>
+    <string name="none">None</string>
+    <string name="any">Any</string>
+    <string name="wifi">Wifi</string>
+    <string name="network_required">Network Type Required:</string>
+    <string name="schedule_job">Schedule Job</string>
+    <string name="cancel_job">Cancel Job</string>
+</resources>

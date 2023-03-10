@@ -16,18 +16,20 @@ public class MainActivity extends AppCompatActivity {
     public static final int TEXT_REQUEST = 1;
 
     private TextView mProduct;
-    private TextView mFirst;
+    private int count = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mFirst = findViewById(R.id.textView1);
         Log.d(LOG_TAG, "onCreate");
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        int id = getResources().getIdentifier("textView" + count, "id", getPackageName());
+        mProduct = findViewById(id);
+        Log.d(LOG_TAG, "onActivityResult");
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == TEXT_REQUEST) {
             if (resultCode == RESULT_OK) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 mProduct.setText(reply);
             }
         }
+        count++;
     }
 
     @Override
@@ -56,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        if (mFirst.getText().toString() != "") {
-            //outState.putBoolean("reply_visible", true);
-            //outState.putString("reply_text", mReplyTextView.getText().toString());
-        }
+        super.onSaveInstanceState(outState);/*
+        if (mProduct.getText().toString() != "") {
+            outState.putBoolean("reply_visible", true);
+            outState.putString("reply_text", mProduct.getText().toString());
+        }*/
     }
 }
